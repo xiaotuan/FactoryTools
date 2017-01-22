@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    配置说明：
+        （１）test_item_title和test_item_class数组是主界面显示测试列表，test_item_title是测试的名称，test_item_class是对应的测试Activity的完整类名。
+            如果需要添加新的测试项，可以在test_item_title添加测试项的名称，以及在test_item_class添加测试项的完整类名即可。
+        （２）system_test_title和system_test_class数组是系统测试组中的测试名称和测试类的类名。
+            如果需要在系统测试组中，则在system_test_title数组中添加测试名称，在system_test_class下添加对应的类名。
+        （３）其他的屏幕测试组（screen_test_title）、铃声测试组（ring_test_title）、电话测试组（telephony_test_title）、附件测试组（annex_test_title）、
+            无线测试组（wireless_test_title）、传感器测试组（sensor_test_title）、相机测试组（camera_test_title）和按键测试组（key_test_title）的配置方法与（２）相同。
+        （４）test_item_state_list是获取测试的状态，通过该数组的内容可以获取到对应的测试组数组，通过测试组可以获取到测试组下的所有测试项的测试状态。
+-->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!--    测试列表标题    -->
+    <string-array name="test_item_title">
+        <item>@string/system_test_title</item>
+        <item>@string/screen_test_title</item>
+        <item>@string/ring_test_title</item>
+        <item>@string/telephony_test_title</item>
+        <item>@string/annex_test_title</item>
+        <item>@string/wireless_test_title</item>
+        <item>@string/sensor_test_title</item>
+        <item>@string/camera_test_title</item>
+        <item>@string/key_test_title</item>
+        <item>@string/test_report_title</item>
+    </string-array>
+
+    <!--    测试列表类名   -->
+    <string-array name="test_item_class">
+        <item>com.qty.factorytools.systemtest.SystemTestList</item>
+        <item>com.qty.factorytools.screentest.ScreenTestList</item>
+        <item>com.qty.factorytools.ringtest.RingTestList</item>
+        <item>com.qty.factorytools.telephonytest.TelephonyTestList</item>
+        <item>com.qty.factorytools.annextest.AnnexTestList</item>
+        <item>com.qty.factorytools.wirelesstest.WirelessTestList</item>
+        <item>com.qty.factorytools.sensortest.SensorTestList</item>
+        <item>com.qty.factorytools.cameratest.CameraTestList</item>
+        <item>com.qty.factorytools.keytest.KeyTestList</item>
+        <item>com.qty.factorytools.TestReportActivity</item>
+    </string-array>
+
+    <!--    系统测试列表标题  -->
+    <string-array name="system_test_title">
+        <item>@string/version_test_title</item>
+        <item>@string/rf_cali_test_title</item>
+        <item>@string/rtc_test_title</item>
+    </string-array>
+
+    <!--    系统测试列表类名     -->
+    <string-array name="system_test_class">
+        <item>com.qty.factorytools.systemtest.SystemVersionTest</item>
+        <item>com.qty.factorytools.systemtest.RfCaliTest</item>
+        <item>com.qty.factorytools.systemtest.RtcTest</item>
+    </string-array>
+
+    <!--    屏幕测试列表标题    -->
+    <string-array name="screen_test_title">
+        <item>@string/lcd_test_title</item>
+        <item>@string/backlit_test_title</item>
+        <item>@string/single_finger_touch_test_title</item>
+        <item>@string/multi_finger_touch_test_title</item>
+    </string-array>
+
+    <!--    屏幕测试列表类名  -->
+    <string-array name="screen_test_class">
+        <item>com.qty.factorytools.screentest.LcdTest</item>
+        <item>com.qty.factorytools.screentest.BacklitTest</item>
+        <item>com.qty.factorytools.screentest.SingleFingerTouchTest</item>
+        <item>com.qty.factorytools.screentest.MultiFingerTouchTest</item>
+    </string-array>
+
+    <!--    铃声测试列表标题    -->
+    <string-array name="ring_test_title">
+        <item>@string/vibration_test_title</item>
+        <item>@string/ring_test_title</item>
+    </string-array>
+
+    <!--    铃声测试列表类名  -->
+    <string-array name="ring_test_class">
+        <item>com.qty.factorytools.ringtest.VibrationTest</item>
+        <item>com.qty.factorytools.ringtest.RingTest</item>
+    </string-array>
+
+    <!--    电话测试列表标题    -->
+    <string-array name="telephony_test_title">
+        <item>@string/loop_back_test_title</item>
+        <item>@string/sim_card_test_title</item>
+        <item>@string/earpiece_test_title</item>
+        <item>@string/call_test_title</item>
+    </string-array>
+
+    <!--    电话测试列表类名  -->
+    <string-array name="telephony_test_class">
+        <item>com.qty.factorytools.telephonytest.LoopbackTest</item>
+        <item>com.qty.factorytools.telephonytest.SimCardTest</item>
+        <item>com.qty.factorytools.telephonytest.EarpieceTest</item>
+        <item>com.qty.factorytools.telephonytest.CallTest</item>
+    </string-array>
+
+    <!--    附件测试列表标题    -->
+    <string-array name="annex_test_title">
+        <item>@string/sdcard_test_title</item>
+        <item>@string/charging_test_title</item>
+        <item>@string/headset_test_title</item>
+    </string-array>
+
+    <!--    附件测试列表类名  -->
+    <string-array name="annex_test_class">
+        <item>com.qty.factorytools.annextest.SdcardTest</item>
+        <item>com.qty.factorytools.annextest.ChargingTest</item>
+        <item>com.qty.factorytools.annextest.HeadsetTest</item>
+    </string-array>
+
+    <!--    无线测试列表标题    -->
+    <string-array name="wireless_test_title">
+        <item>@string/fmradio_test_title</item>
+        <item>@string/wifi_test_title</item>
+        <item>@string/bluetooth_test_title</item>
+        <item>@string/gps_test_title</item>
+    </string-array>
+
+    <!--    无线测试列表类名  -->
+    <string-array name="wireless_test_class">
+        <item>com.qty.factorytools.wirelesstest.FMRadioTest</item>
+        <item>com.qty.factorytools.wirelesstest.WifiTest</item>
+        <item>com.qty.factorytools.wirelesstest.BluetoothTest</item>
+        <item>com.qty.factorytools.wirelesstest.GPSTest</item>
+    </string-array>
+
+    <!--    传感器测试列表标题   -->
+    <string-array name="sensor_test_title">
+        <item>@string/gravity_sensor_test_title</item>
+        <item>@string/proximity_sensor_test_title</item>
+        <item>@string/ambient_light_test_title</item>
+    </string-array>
+
+    <!--    传感器测试列表类名     -->
+    <string-array name="sensor_test_class">
+        <item>com.qty.factorytools.sensortest.GravitySensorTest</item>
+        <item>com.qty.factorytools.sensortest.ProximitySensorTest</item>
+        <item>com.qty.factorytools.sensortest.AmbientLightTest</item>
+    </string-array>
+
+    <!--    相机测试列表标题    -->
+    <string-array name="camera_test_title">
+        <item>@string/camera_test_title</item>
+    </string-array>
+
+    <!--    相机测试列表类名  -->
+    <string-array name="camera_test_class">
+        <item>com.qty.factorytools.cameratest.CameraTest</item>
+    </string-array>
+
+    <!--    按键测试列表标题    -->
+    <string-array name="key_test_title">
+        <item>@string/key_test_title</item>
+    </string-array>
+
+    <!--    按键测试列表类名    -->
+    <string-array name="key_test_class">
+        <item>com.qty.factorytools.keytest.KeyTest</item>
+    </string-array>
+
+    <!--    测试结果数组名称，是每个测试列表类名的数组名称，最终通过数组名称获取该测试列表下的所有测试项的类名   -->
+    <string-array name="test_item_state_list">
+        <item>system_test_class</item>
+        <item>screen_test_class</item>
+        <item>ring_test_class</item>
+        <item>telephony_test_class</item>
+        <item>annex_test_class</item>
+        <item>wireless_test_class</item>
+        <item>sensor_test_class</item>
+        <item>camera_test_class</item>
+        <item>key_test_class</item>
+    </string-array>
+
+    <!--  自动测试时，进行下一测试项测试的延迟时间，单位：毫秒   -->
+    <integer name="auto_test_delay_time">3000</integer>
+
+    <!--    屏幕测试时，使用的颜色数组   -->
+    <integer-array name="lcd_test_colors">
+        <item>0xffffffff</item>
+        <item>0xffff0000</item>
+        <item>0xff00ff00</item>
+        <item>0xff0000ff</item>
+        <item>0xffffff00</item>
+    </integer-array>
+
+    <!--    LCD　测试时切换屏幕颜色的延迟时间，单位：毫秒    -->
+    <integer name="lcd_test_next_color_delayed">5000</integer>
+    <!--    LCD 测试时隐藏操作提示信息的延迟时间，　单位：毫秒   -->
+    <integer name="lcd_test_hide_start_tip_delayed">3000</integer>
+    <!--    LCD 测试时显示结束测试提示信息的延迟时间，单位：毫秒    -->
+    <integer name="lcd_test_show_end_tip_delayed">5000</integer>
+
+    <!--    背光测试颜色数组    -->
+    <integer-array name="backlit_test_colors">
+        <item>0xff000000</item>
+        <item>0xffffffff</item>
+    </integer-array>
+    <!--    背光测试颜色切换延迟时间    -->
+    <integer name="backlit_test_switch_color_delayed">1000</integer>
+    <!--    背光测试切换次数    -->
+    <integer name="backlit_test_switch_times">4</integer>
+
+    <integer-array name="vibration_time">
+        <item>0</item>
+        <item>1000</item>
+        <item>0</item>
+        <item>1000</item>
+    </integer-array>
+
+</resources>
